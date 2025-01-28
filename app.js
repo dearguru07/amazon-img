@@ -27,10 +27,16 @@
 //   console.log(c)
 // }
 
-let z=25
-a()
-function a(){
-  console.log(z)
-  var c=20
-  console.log('hello world....')
-}
+// let z=25
+// a()
+// function a(){
+//   console.log(z)
+//   var c=20
+//   console.log('hello world....')
+// }
+
+
+let a =20
+console.log(a)
+var b=25;
+const c=44;
