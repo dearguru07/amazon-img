@@ -41,7 +41,3 @@ console.log(a)
 var b=25;
 const c=44;
 
-let a =20
-console.log(a)
-var b=25;
-const c=44;
