@@ -89,3 +89,14 @@ if is_prime(num):
     print(f"{num} is a prime number.")
 else:
     print(f"{num} is not a prime number.")
+
+
+def is_palindrome(number):
+    return str(number) == str(number)[::-1]
+
+# Example Usage
+num = int(input("Enter a number: "))
+if is_palindrome(num):
+    print(f"{num} is a Palindrome number.")
+else:
+    print(f"{num} is not a Palindrome number.")
