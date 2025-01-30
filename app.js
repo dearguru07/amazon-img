@@ -107,3 +107,43 @@ function reverseWords(sentence) {
 let sentence = "The quick brown fox jumps over the lazy dog";
 let reversedSentence = reverseWords(sentence);
 console.log(reversedSentence);  // Output: "dog lazy the over jumps fox brown quick The"
+
+
+function quickselect(arr, left, right, k) {
+    if (left === right) return arr[left];
+    
+    const pivotIndex = partition(arr, left, right);
+    
+    if (k === pivotIndex) {
+        return arr[k];
+    } else if (k < pivotIndex) {
+        return quickselect(arr, left, pivotIndex - 1, k);
+    } else {
+        return quickselect(arr, pivotIndex + 1, right, k);
+    }
+}
+
+function partition(arr, left, right) {
+    const pivot = arr[right];
+    let i = left;
+    
+    for (let j = left; j < right; j++) {
+        if (arr[j] >= pivot) {
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            i++;
+        }
+    }
+    
+    [arr[i], arr[right]] = [arr[right], arr[i]];
+    return i;
+}
+
+function findKthLargest(arr, k) {
+    const n = arr.length;
+    return quickselect(arr, 0, n - 1, k - 1); // k-1 to match zero-indexed
+}
+
+// Example Usage
+let arr = [3, 2, 1, 5, 6, 4];
+let k = 2;
+console.log(findKthLargest(arr, k));  // Output: 5
