@@ -183,17 +183,30 @@
 // let a =20
 // console.log(a)
 
-// if(true)
+// if(true)true;
 
-function x() {
-  for (let i = 1; i <= 5; i++) {
-    function a(x) {
-      setTimeout(function () {
-        console.log(x);
-      }, x*1000);
-    }
-    a(i);
-  }
 
-}
-x();
+
+// function x() {
+//   for (let i = 1; i <= 5; i++) {
+//     function a(x) {
+//       setTimeout(function () {
+//         console.log(x);
+//       }, x * 1000);
+//     }
+//     a(i);
+//   }
+// }
+// x();
+
+
+// var f=function a(){
+//     function b(){
+//       console.log(a)
+//     }
+//     b()
+// }
+// f()
+
+
+console.log(x())
